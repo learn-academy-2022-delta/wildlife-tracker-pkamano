@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+animal-crud-actions
 ActiveRecord::Schema[7.0].define(version: 2022_07_22_164905) do
+=======
+ActiveRecord::Schema[7.0].define(version: 2022_07_22_180517) do
+main
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,6 +25,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_22_164905) do
     t.datetime "updated_at", null: false
   end
 
+animal-crud-actions
+=======
+  create_table "sightings", force: :cascade do |t|
+    t.integer "animal_id"
+    t.string "latitude"
+    t.string "longitude"
+    t.date "sighting"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+ main
   create_table "wildlives", force: :cascade do |t|
     t.string "common_name"
     t.string "scientific_binomial"
